@@ -1,0 +1,13 @@
+C:\Users\Usuario\Documents\Chancletas\Chancletas\bin\Debug\Chancletas.exe.config
+C:\Users\Usuario\Documents\Chancletas\Chancletas\bin\Debug\Chancletas.exe
+C:\Users\Usuario\Documents\Chancletas\Chancletas\bin\Debug\Chancletas.pdb
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.csproj.AssemblyReference.cache
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Form1.resources
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Properties.Resources.resources
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.csproj.GenerateResource.cache
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.csproj.CoreCompileInputs.cache
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.exe
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.pdb
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Vistas.ChancletasTalle.resources
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Vistas.btChanMarca.resources
