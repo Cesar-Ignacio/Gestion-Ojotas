@@ -58,5 +58,37 @@ namespace Chancletas.Datos
             return ds;
         }
 
+        public DataSet obtenerTablaChancletasPorTalle(String talle)
+        {
+            string consulta = "select NombreColor, talle, CantidadPares, NombreMarca from Chancletas inner join Colores on Chancletas.IdColor = Colores.IdColor inner join Marcas on Marcas.CodMarca = Chancletas.CodMarca where talle ='" + talle+"'";
+            SqlDataAdapter adap=new SqlDataAdapter(consulta,establecerConexion());
+            DataSet ds=new DataSet();
+            adap.Fill(ds, "Tabla");
+            conexion.Close();
+            return ds;
+        }
+
+        public DataSet obtenerTablaChancletasPorMarca(String marca)
+        {
+            string consulta = "select NombreColor, talle, CantidadPares, NombreMarca from Chancletas inner join Colores on Chancletas.IdColor = Colores.IdColor inner join Marcas on Chancletas.CodMarca = Marcas.CodMarca where Marcas.NombreMarca = '" + marca + "'";
+            SqlDataAdapter adap=new SqlDataAdapter(consulta,establecerConexion());
+            DataSet ds = new DataSet();
+            adap.Fill(ds,"Tabla");
+            conexion.Close();
+            return ds;
+
+        }
+
+        public DataSet obtenerTablaChancletaColorTallMarca(string color,string talle,string marca)
+        {
+            string consulta = "select NombreColor, Talle, CantidadPares, NombreMarca from Chancletas inner join Colores on Chancletas.IdColor = Colores.IdColor  inner  join Marcas  on Chancletas.CodMarca = Marcas.CodMarca where talle = '" + talle + "' and nombreColor = '" + color + "' and nombreMarca = '" + marca + "'";
+            SqlDataAdapter adap = new SqlDataAdapter(consulta, establecerConexion());
+            DataSet ds = new DataSet();
+            adap.Fill(ds, "Tabla");
+            conexion.Close();
+            return ds;
+        }
+        
+
     }
 }

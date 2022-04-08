@@ -25,6 +25,31 @@ namespace Chancletas.Negocio
             ds=da.obtenerTablaChancletas(color);
             return ds.Tables["Tabla"];
         }
+        public DataTable obtenerChancletaPorTalle(String talle)
+        {
+            datoConexion con=new datoConexion();
+            DataSet ds = new DataSet();
+            ds = con.obtenerTablaChancletasPorTalle(talle);
+            return ds.Tables["Tabla"];
+        }
+        public DataTable obtenerChancletasPorMarca(string marca)
+        {
+            datoConexion con = new datoConexion();
+            DataSet ds = new DataSet();
+            ds=con.obtenerTablaChancletasPorMarca(marca);
+            return ds.Tables["Tabla"];
+        }
+
+        public DataTable obtenerChancletasPorColorTallMarca(string color,string talle,string marca)
+        {
+            datoConexion cn = new datoConexion();
+
+            DataSet ds = new DataSet();
+            ds = cn.obtenerTablaChancletaColorTallMarca(color,talle,marca);
+
+            return ds.Tables["Tabla"];
+
+        }
 
     }
 }

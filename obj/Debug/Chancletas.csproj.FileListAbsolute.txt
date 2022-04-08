@@ -11,3 +11,5 @@ C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.exe
 C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.pdb
 C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Vistas.ChancletasTalle.resources
 C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Vistas.btChanMarca.resources
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Vistas.ChancletasMarca.resources
+C:\Users\Usuario\Documents\Chancletas\Chancletas\obj\Debug\Chancletas.Vistas.ChancletasColorMarcaTalle.resources

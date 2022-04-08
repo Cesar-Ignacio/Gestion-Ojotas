@@ -54,5 +54,11 @@ namespace Chancletas.Vistas
             ChancletasTalle fomr = new ChancletasTalle();
             fomr.Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChancletasMarca fomr=new ChancletasMarca();
+            fomr.Show();
+        }
     }
 }

@@ -33,8 +33,8 @@
             this.btbuscar = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btBuscarPorColor = new System.Windows.Forms.Button();
+            this.btBuscarPorTalle = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +46,6 @@
             this.lbTitutlo.Size = new System.Drawing.Size(111, 13);
             this.lbTitutlo.TabIndex = 0;
             this.lbTitutlo.Text = "Chancletas por Marca";
-            this.lbTitutlo.Click += new System.EventHandler(this.lbTitutlo_Click);
             // 
             // cbxMarca
             // 
@@ -58,19 +57,20 @@
             // 
             // btbuscar
             // 
-            this.btbuscar.Location = new System.Drawing.Point(343, 121);
+            this.btbuscar.Location = new System.Drawing.Point(351, 121);
             this.btbuscar.Name = "btbuscar";
             this.btbuscar.Size = new System.Drawing.Size(75, 23);
             this.btbuscar.TabIndex = 2;
             this.btbuscar.Text = "Buscar";
             this.btbuscar.UseVisualStyleBackColor = true;
+            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(183, 181);
+            this.dataGridView1.Location = new System.Drawing.Point(143, 182);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(416, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(460, 150);
             this.dataGridView1.TabIndex = 3;
             // 
             // button1
@@ -82,31 +82,33 @@
             this.button1.Text = "Buscar";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btBuscarPorColor
             // 
-            this.button2.Location = new System.Drawing.Point(143, 76);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Buscar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btBuscarPorColor.Location = new System.Drawing.Point(143, 76);
+            this.btBuscarPorColor.Name = "btBuscarPorColor";
+            this.btBuscarPorColor.Size = new System.Drawing.Size(97, 23);
+            this.btBuscarPorColor.TabIndex = 5;
+            this.btBuscarPorColor.Text = "Buscar por Color";
+            this.btBuscarPorColor.UseVisualStyleBackColor = true;
+            this.btBuscarPorColor.Click += new System.EventHandler(this.btBuscarPorColor_Click);
             // 
-            // button3
+            // btBuscarPorTalle
             // 
-            this.button3.Location = new System.Drawing.Point(143, 34);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Buscar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btBuscarPorTalle.Location = new System.Drawing.Point(143, 34);
+            this.btBuscarPorTalle.Name = "btBuscarPorTalle";
+            this.btBuscarPorTalle.Size = new System.Drawing.Size(75, 23);
+            this.btBuscarPorTalle.TabIndex = 6;
+            this.btBuscarPorTalle.Text = "Buscar por Talle";
+            this.btBuscarPorTalle.UseVisualStyleBackColor = true;
+            this.btBuscarPorTalle.Click += new System.EventHandler(this.btBuscarPorTalle_Click);
             // 
             // ChancletasMarca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btBuscarPorTalle);
+            this.Controls.Add(this.btBuscarPorColor);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btbuscar);
@@ -117,6 +119,7 @@
             this.Name = "ChancletasMarca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChancletasMarca";
+            this.Load += new System.EventHandler(this.ChancletasMarca_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,7 +133,7 @@
         private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btBuscarPorColor;
+        private System.Windows.Forms.Button btBuscarPorTalle;
     }
 }

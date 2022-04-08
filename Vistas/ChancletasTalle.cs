@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Chancletas.Negocio;
 namespace Chancletas.Vistas
 {
     public partial class ChancletasTalle : Form
@@ -32,9 +32,11 @@ namespace Chancletas.Vistas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            btChanMarca dd = new btChanMarca();
-            dd.Show();
-    
+            string talle=cbxTalles.Text;
+            negChancletas neg = new negChancletas();
+            dataGridView1.DataSource = neg.obtenerChancletaPorTalle(talle);
+
+
         }
     }
 }
