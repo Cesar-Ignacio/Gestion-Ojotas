@@ -28,52 +28,79 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btAceptar = new System.Windows.Forms.Button();
-            this.cbxColores = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.btConsultas = new System.Windows.Forms.Button();
+            this.btCreacion = new System.Windows.Forms.Button();
+            this.lbHora = new System.Windows.Forms.Label();
+            this.lbfecha = new System.Windows.Forms.Label();
+            this.horaFecha = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // btAceptar
+            // btConsultas
             // 
-            this.btAceptar.Location = new System.Drawing.Point(336, 148);
-            this.btAceptar.Name = "btAceptar";
-            this.btAceptar.Size = new System.Drawing.Size(103, 32);
-            this.btAceptar.TabIndex = 0;
-            this.btAceptar.Text = "Buscar";
-            this.btAceptar.UseVisualStyleBackColor = true;
-            this.btAceptar.Click += new System.EventHandler(this.btAceptar_Click);
+            this.btConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btConsultas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btConsultas.Location = new System.Drawing.Point(184, 102);
+            this.btConsultas.Name = "btConsultas";
+            this.btConsultas.Size = new System.Drawing.Size(180, 177);
+            this.btConsultas.TabIndex = 0;
+            this.btConsultas.Text = "Cosultas / Busar";
+            this.btConsultas.UseVisualStyleBackColor = false;
+            this.btConsultas.Click += new System.EventHandler(this.btAceptar_Click);
             // 
-            // cbxColores
+            // btCreacion
             // 
-            this.cbxColores.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxColores.FormattingEnabled = true;
-            this.cbxColores.Location = new System.Drawing.Point(304, 104);
-            this.cbxColores.Name = "cbxColores";
-            this.cbxColores.Size = new System.Drawing.Size(166, 21);
-            this.cbxColores.TabIndex = 2;
-            this.cbxColores.SelectedIndexChanged += new System.EventHandler(this.cbxColores_SelectedIndexChanged);
+            this.btCreacion.Enabled = false;
+            this.btCreacion.Location = new System.Drawing.Point(412, 102);
+            this.btCreacion.Name = "btCreacion";
+            this.btCreacion.Size = new System.Drawing.Size(180, 177);
+            this.btCreacion.TabIndex = 1;
+            this.btCreacion.Text = "Creacion";
+            this.btCreacion.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // lbHora
             // 
-            this.textBox1.Location = new System.Drawing.Point(304, 196);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(166, 20);
-            this.textBox1.TabIndex = 3;
+            this.lbHora.AutoSize = true;
+            this.lbHora.BackColor = System.Drawing.Color.Transparent;
+            this.lbHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.lbHora.Location = new System.Drawing.Point(12, 9);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(54, 25);
+            this.lbHora.TabIndex = 2;
+            this.lbHora.Text = "Hora";
+            // 
+            // lbfecha
+            // 
+            this.lbfecha.AutoSize = true;
+            this.lbfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbfecha.ForeColor = System.Drawing.Color.DimGray;
+            this.lbfecha.Location = new System.Drawing.Point(12, 43);
+            this.lbfecha.Name = "lbfecha";
+            this.lbfecha.Size = new System.Drawing.Size(49, 20);
+            this.lbfecha.TabIndex = 3;
+            this.lbfecha.Text = "fecha";
+            // 
+            // horaFecha
+            // 
+            this.horaFecha.Enabled = true;
+            this.horaFecha.Tick += new System.EventHandler(this.horaFecha_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.cbxColores);
-            this.Controls.Add(this.btAceptar);
+            this.Controls.Add(this.lbfecha);
+            this.Controls.Add(this.lbHora);
+            this.Controls.Add(this.btCreacion);
+            this.Controls.Add(this.btConsultas);
             this.MaximumSize = new System.Drawing.Size(800, 400);
             this.MinimumSize = new System.Drawing.Size(800, 400);
             this.Name = "Form1";
             this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Aplicacion";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -82,9 +109,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btAceptar;
-        private System.Windows.Forms.ComboBox cbxColores;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btConsultas;
+        internal System.Windows.Forms.Button btCreacion;
+        private System.Windows.Forms.Label lbHora;
+        private System.Windows.Forms.Label lbfecha;
+        private System.Windows.Forms.Timer horaFecha;
     }
 }
 

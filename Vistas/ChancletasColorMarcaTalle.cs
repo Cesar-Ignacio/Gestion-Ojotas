@@ -8,14 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Chancletas.Negocio;
+
 namespace Chancletas.Vistas
 {
+
     public partial class ChancletasColorMarcaTalle : Form
     {
+
+        private Form formulario;
+        
         public ChancletasColorMarcaTalle()
         {
             InitializeComponent();
         }
+
 
         private void ChancletasColorMarcaTalle_Load(object sender, EventArgs e)
         {
@@ -54,8 +60,35 @@ namespace Chancletas.Vistas
 
             negChancletas neg = new negChancletas();
 
-            dataGridView1.DataSource = neg.obtenerChancletasPorColorTallMarca(color,talle,marca);
+            dataGridView1.DataSource = neg.obtenerChancletasPorColorTallMarca(color, talle, marca);
 
+        }
+
+        private void btBusColor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasPorColor();
+            formulario.Show();
+        }
+
+        private void btBusMarca_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasMarca();
+            formulario.Show();
+        }
+
+        private void btBuscarTalle_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasTalle();
+            formulario.Show();
+        }
+
+        private void tmHoraFecha_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text= DateTime.Now.ToString("hh:mm:ss");
+            lbfecha.Text=DateTime.Now.ToLongDateString();
         }
     }
 }

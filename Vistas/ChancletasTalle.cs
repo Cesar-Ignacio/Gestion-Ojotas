@@ -12,6 +12,9 @@ namespace Chancletas.Vistas
 {
     public partial class ChancletasTalle : Form
     {
+
+        private Form formulario;
+        
         public ChancletasTalle()
         {
             InitializeComponent();
@@ -37,6 +40,33 @@ namespace Chancletas.Vistas
             dataGridView1.DataSource = neg.obtenerChancletaPorTalle(talle);
 
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasPorColor();
+            formulario.Show();
+        }
+
+        private void btBusColor_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasPorColor();
+            formulario.Show();
+        }
+
+        private void btBusMarca_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasMarca();
+            formulario.Show();
+        }
+
+        private void tmHoraFecha_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lbfecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }

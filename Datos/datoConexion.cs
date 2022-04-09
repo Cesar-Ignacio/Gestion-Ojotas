@@ -41,6 +41,7 @@ namespace Chancletas.Datos
             }
             catch (Exception ex)
             {
+                ex.ToString();
                 return false;
 
             }

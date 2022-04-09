@@ -17,7 +17,7 @@ namespace Chancletas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ChancletasColorMarcaTalle());
+            Application.Run(new Form1());
         }
     }
 }

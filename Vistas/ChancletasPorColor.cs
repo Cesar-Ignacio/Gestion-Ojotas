@@ -13,9 +13,12 @@ using Chancletas.Negocio;
 
 namespace Chancletas.Vistas
 {
-    public partial class btChanMarca : Form
+    public partial class ChancletasPorColor : Form
     {
-        public btChanMarca()
+
+        private Form formulario;
+
+        public ChancletasPorColor()
         {
             InitializeComponent();
         }
@@ -57,8 +60,22 @@ namespace Chancletas.Vistas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ChancletasMarca fomr=new ChancletasMarca();
-            fomr.Show();
+            this.Hide();
+            formulario=new ChancletasMarca();
+            formulario.Show();
+        }
+
+        private void btBuscarColTalMar_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            formulario = new ChancletasColorMarcaTalle();
+            formulario.Show();
+        }
+
+        private void tmHoraFecha_Tick(object sender, EventArgs e)
+        {
+            lbHora.Text = DateTime.Now.ToString("hh:mm:ss");
+            lbfecha.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
