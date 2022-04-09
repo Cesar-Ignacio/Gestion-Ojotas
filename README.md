@@ -10,5 +10,6 @@ Aplicaión de escritorio para realizar consultas y recibir informacion sobre los
 
 ## Base de Datos
 La aplicacion esta relacionada con una base de datos
+
 **tablas**
 
